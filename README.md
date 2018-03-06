@@ -23,3 +23,6 @@ Given the bilingual model and the social network architecture, we can know how t
 
 In our implementation, multiple languages are considered in pairs to determine the influence towards each other.
 
+![](/img/begin.png)
+![](/img/end.png)
+![](/img/trend.png)
