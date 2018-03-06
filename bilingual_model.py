@@ -60,7 +60,7 @@ def main():
     num_clique = 2
     #G = nx.relaxed_caveman_graph(num_clique, num_speakers//num_clique, 0.05)
 
-    #draw_graph(G, lang_speaker, "Iter_0")
+    draw_graph(G, lang_speaker, "Iter_0")
 
     new_lang_speaker = lang_speaker.copy()
     for t in range(1, iterations+1):
@@ -122,12 +122,13 @@ def main():
         ret = speaker_analysis(lang_speaker)
         #print("Iter " + str(t) + ": ", ret, "\n")
         history_record.append(ret)
+        if doPlotting is True and t % iter_per_plot == 0:
+            draw_graph(G, lang_speaker, "Iter " + str(t))
 
     # end iteration
-    if doPlotting is True:
-        #draw_graph(G, lang_speaker, "Iter_" + str(t))
-        draw_trend(history_record, all_lang, add)
-
+    draw_graph(G, lang_speaker, "Final")
+    draw_trend(history_record, all_lang, summary=True)
+    draw_trend(history_record, all_lang, summary=False)
 
 
 if __name__ == '__main__':

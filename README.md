@@ -19,7 +19,7 @@ The **Bilinguals Model** is an extension of the Abrams-Strogatz model. It introd
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;P(XY{\rightarrow}Y)=S(1-\sigma_{Y})^{\alpha}" title="\LargeP(Y{\rightarrow}X)=S\sigma_{X}^{\alpha}" />
 
 
-
 Given the bilingual model and the social network architecture, we can know how the number of speakers of each language changes.
 
 In our implementation, multiple languages are considered in pairs to determine the influence towards each other.
+

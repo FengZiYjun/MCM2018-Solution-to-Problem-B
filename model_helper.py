@@ -1,8 +1,8 @@
 # useful functions for language models
-#import networkx as nx
+import networkx as nx
 import matplotlib.pyplot as plt
 from numpy.random import choice
-#from collections import Counter
+from collections import Counter
 import math
 import time
 from matplotlib_colors_dict import color_names
@@ -79,8 +79,9 @@ def draw_graph(graph, lang_speaker, fig_name):
 
     plt.legend(numpoints =1)
     plt.axis('off')
-    plt.show()
     plt.savefig("img/" + fig_name + ".png")
+    plt.show()
+    
     plt.close()
 
 
@@ -97,16 +98,17 @@ def draw_record(add_list, win, fail):
     plt.plot(X, fail, '-*', label="fail")
     plt.legend()
     plt.title("Language Survival over prestige")
+    plt.savefig("img./final" + timestamp + ".png")
     plt.show()
 
     now = time.localtime()
     timestamp = "_" + str(now.tm_hour) + "h" + str(now.tm_min) + "m" + str(now.tm_sec) + "s"
-    plt.savefig("img./final" + timestamp + ".png")
+    
     plt.close()
 
 
-def draw_trend(history, all_lang, sa, summary=False):
-    """
+def draw_trend(history, all_lang, summary=False):
+    
     # dict of (string : list)
     trend = {lang:list() for lang in all_lang}  
     X = []
@@ -118,9 +120,9 @@ def draw_trend(history, all_lang, sa, summary=False):
                 trend[lang].append(record[lang])
             else:
                 trend[lang].append(0)
-    """
-    trend = history
-    X = [t+1 for t in range(len(history[all_lang[0]]))]
+    
+    #trend = history
+    #X = [t+1 for t in range(len(history[all_lang[0]]))]
 
     if summary is True:
         trend["X_"] = trend["X"]
@@ -150,11 +152,10 @@ def draw_trend(history, all_lang, sa, summary=False):
         legend = list(trend.keys())
     
     plt.legend(legend)
-    plt.title("Delta=" + str(sa))
 
     now = time.localtime()
     timestamp = "_" + str(now.tm_hour) + "h" + str(now.tm_min) + "m" + str(now.tm_sec) + "s"
-    plt.savefig("img/trend" +"_D=" + str(sa) + timestamp + ".png")
+    plt.savefig("img/trend" + timestamp + ".png")
 
     plt.show()
     plt.close()
@@ -244,12 +245,7 @@ def speaker_analysis(lang_speaker):
 
 
 def test():
-    from numpy import random
-
-    X = [x*0.002 for x in range(100)]
-    Y = ([0] * (0.03//0.002))
-    Y += 0.51 / (0.1 - 0.03) * 
-
+    pass
 
 if __name__ == "__main__":
     test()
