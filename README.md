@@ -2,7 +2,7 @@
 
 Problem B of MCM 2018 can be found ![here](https://www.comap.com/undergraduate/contests/).
 
-We implemented the **Bilinguals Model** that was proposed in this paper *Agent Based Models of Language Competition: Macroscopic descriptions and Order-Disorder transitions*.
+We implemented the **Bilinguals Model** that was proposed in ![this](https://www.pks.mpg.de/~federico/myarticles/language.pdf) paper: *Agent Based Models of Language Competition: Macroscopic descriptions and Order-Disorder transitions*.
 
 The Abrams-Strogatz model explored the evolution of two languages where the speakers are the nodes in a massive social network of interaction. The probability that one language speaker changes its language to the other depends on the *prestige* of the language <img src="https://latex.codecogs.com/svg.latex?\Large&space;S" title=""/>, the density of neighboring speakers of language X around this individual  <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma_X" title=""/>, and the volatility parameter <img src="https://latex.codecogs.com/svg.latex?\Large&space;\alpha" title=""/>.
 
