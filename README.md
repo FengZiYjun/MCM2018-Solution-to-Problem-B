@@ -70,3 +70,16 @@ The parameter settings are as follows.
 These two figures illustrate how the number of speakers of different languages change during the iterations.
 "X_" includes both monolinguals of X and bilinguals whose first language is X. Same notation for "Y_" and "Z_".
 ![](/img/trend.png)
+
+## Implementation details
+### Python package required
+- networkx
+- matplotlib
+- numpy
+
+### how to use
+1. make sure required Python packages installed in your local environment.
+2. clone this repository.\
+`git clone https://github.com/FengZiYjun/MCM2018-Solution-to-Problem-B.git`
+3. set up parameters in `bilingual_model.py`.
+4. run the model by `python bilingual_model.py`.
