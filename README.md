@@ -23,6 +23,50 @@ Given the bilingual model and the social network architecture, we can know how t
 
 In our implementation, multiple languages are considered in pairs to determine the influence towards each other.
 
+## Demo
+In this demo, we present the results of every 10 iterations in the network. The network is randomly generated and fixed during the iterations. Every node in the network represents an individual who would possibly be a monolingual or a bilingual.
+The parameter settings are as follows.
+
+    '''
+    num_speakers = 1000  # number of speakers/nodes in the network
+
+    # number of languages
+    # Each language is encoded by one of capital letters X, Y, Z...
+    num_lang = 3
+
+    # population ratio of each language. If equal, set None.
+    # Notice: sum to 1
+    lang_ratio = None
+    
+    # prestige of each language: positive number
+    # Larger number, higher prestige.
+    absolute_prestige = [0.5, 0.5, 0.5]
+
+    # volatility of a specific language. Eg. ('A': 2)
+    volatility = {}
+    # default volatility, if not specified.
+    def_vol = 1  
+    
+    # the ratio of bilinguals in total population
+    bi_popularity = 0.35
+
+    # the total number of iterations
+    iterations = 60
+    
+    # whether to plot during the iterations
+    doPlotting = True
+    
+    # do plotting every ? iterations
+    iter_per_plot = 10
+
+    # the probability of connection between two nodes in the network
+    connectivity = 0.05
+    '''
+ 
+
 ![](/img/begin.png)
 ![](/img/end.png)
+
+These two figures illustrate how the number of speakers of different languages change during the iterations.
+"X_" includes both monolinguals of X and bilinguals whose first language is X. Same notation for "Y_" and "Z_".
 ![](/img/trend.png)
